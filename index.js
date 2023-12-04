@@ -3,6 +3,10 @@ const connection = require("./connection");
 const app = express();
 require("dotenv").config();
 
+app.get("/", (req, res, next) => {
+  res.send("Welcome To C5 Revision Backend");
+});
+
 app.listen(process.env.PORT, async () => {
   try {
     await connection;
